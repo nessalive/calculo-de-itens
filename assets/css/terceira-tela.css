@@ -1,0 +1,157 @@
+*{
+ margin: 0;
+ padding: 0;
+ font-family: "Roboto Mono", monospace;
+ font-optical-sizing: auto;
+ font-weight: weight;
+ font-style: normal;
+}
+
+
+.inicio{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: rgb(192,241,237);
+background: -moz-linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
+background: linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0f1ed",endColorstr="#2aa972",GradientType=1);
+}
+
+.caixaGeral{
+ margin-top: 5rem;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ align-content: space-around;
+ align-items: center;
+ width: 80rem;
+ height: 55rem;
+ background-image: url(/assets/img/tema-claro/piquenique.png);
+ background-size: cover; 
+ background-repeat: no-repeat;
+ border-radius: 2rem;
+}
+
+/* .caixaCalculo{
+ 
+
+} */
+.contain {
+ width: 30rem;
+ transform: translate(-50%,-50%);
+ position: absolute;
+ top: 50%;
+ left: 50%;
+}
+
+.formulario {
+ background: #fff78a47;
+ padding: 3em;
+ border-radius: 20px;
+ border-left: 1px solid #E5BABA33;
+ border-top: 1px solid #E5BABA33;
+ backdrop-filter: blur(10px);
+ box-shadow: -3px 3px 20px -7px #000000c7;
+ text-align: center;
+ position: relative;
+ transition: all 0.2s ease-in-out;
+}
+
+.formulario:hover {
+ margin: 4px;
+}
+
+::placeholder {
+ font-family: Montserrat, sans-serif;
+ font-weight: 400;
+ color: #ffffff;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.drop {
+ background: #ffad846e;
+ backdrop-filter: blur(10px);
+ border-radius: 30px;
+ border-left: 1px solid white;
+ border-top: 1px solid white;
+ box-shadow: -2px 3px 20px 0px #000000a6;
+ position: absolute;
+ transition: all 0.2s ease;
+}
+
+.drop-1 {
+ height: 80px;
+ width: 80px;
+ top: -20px;
+ left: -40px;
+ z-index: -1;
+}
+
+.drop-2 {
+ height: 80px;
+ width: 80px;
+ bottom: -30px;
+ right: -10px;
+}
+
+.drop-3 {
+ height: 100px;
+ width: 100px;
+ bottom: 120px;
+ right: -50px;
+ z-index: -1;
+}
+
+.drop-4 {
+ height: 120px;
+ width: 120px;
+ top: -60px;
+ right: -60px;
+}
+
+.drop-5 {
+ height: 60px;
+ width: 60px;
+ bottom: 170px;
+ left: 90px;
+ z-index: -1;
+}
+
+table {
+ width: 375px;
+ border-collapse: collapse;
+ overflow: hidden;
+}
+
+td{
+ text-align: start;
+}
+
+th,
+td {
+ padding: 15px;
+ color: #000000;
+}
+
+th {
+ text-align: left;
+}
+
+tr:hover { 
+ background-color: rgba(255,255,255,0.3);
+   }
+
+ td:hover
+ td::before{
+ position: relative;
+ content: "";
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: -9999px;
+ bottom: -9999px;
+ background-color: rgba(255,255,255,0.2);
+ z-index: -1;
+}
