@@ -12,11 +12,20 @@
  display: flex;
  align-items: center;
  justify-content: center;
- background: rgb(192,241,237);
-background: -moz-linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
-background: linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0f1ed",endColorstr="#2aa972",GradientType=1);
+ background: var(--azul-claro--);
+  background: -moz-linear-gradient(180deg,
+  var(--azul-claro--) 0%,
+    var(--azulMaisClaro--) 35%,
+     var(--verde--) 100%);
+  background: -webkit-linear-gradient(180deg, 
+  var(--azul-claro--) 0%,
+  var(--azulMaisClaro--) 35%,
+  var(--verde--) 100%);
+  background: linear-gradient(180deg,
+  var(--azul-claro--) 0%,
+  var(--azulMaisClaro--) 35%,
+  var(--verde--) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0f1ed",endColorstr="#2aa972",GradientType=1);
 }
 
 .caixaGeral{
@@ -43,13 +52,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0f1ed",endCo
 }
 
 .formulario {
- background: #fff78a47;
+ background: var(--amarelo--);
  padding: 3em;
  border-radius: 20px;
- border-left: 1px solid #E5BABA33;
- border-top: 1px solid #E5BABA33;
+ border-left: 1px solid  var(--bordaVermelha--);
+ border-top: 1px solid var(--bordaVermelha--);
  /* backdrop-filter: blur(10px); */
- box-shadow: -3px 3px 20px -7px #000000c7;
+ box-shadow: -3px 3px 20px -7px var(--sombraBox--);
  text-align: center;
  position: relative;
  transition: all 0.2s ease-in-out;
@@ -67,12 +76,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0f1ed",endCo
 }
 
 .drop {
- background: #ffad846e;
+ background: var(--laranja--);
  backdrop-filter: blur(10px);
  border-radius: 30px;
  border-left: 1px solid white;
  border-top: 1px solid white;
- box-shadow: -2px 3px 20px 0px #000000a6;
+ box-shadow: -2px 3px 20px 0px var(--sombraBox--);
  position: absolute;
  transition: all 0.2s ease;
 }
@@ -128,7 +137,7 @@ td{
 th,
 td {
  padding: 15px;
- color: #000000;
+ color: var(--corLetraFormulario--);
 }
 
 th {
@@ -136,7 +145,7 @@ th {
 }
 
 tr:hover { 
- background-color: rgba(255,255,255,0.3);
+ background-color: var(--fundoFormulario--);
    }
 
  td:hover
@@ -148,7 +157,7 @@ tr:hover {
  right: 0;
  top: -9999px;
  bottom: -9999px;
- background-color: rgba(255,255,255,0.2);
+ background-color: var(--fundoFormulario--);
  z-index: -1;
 }
 

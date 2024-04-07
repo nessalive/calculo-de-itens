@@ -5,6 +5,20 @@
     --temaClaroCor1transp--: #fff78a9c;
     --temaClaroCor2--: #FFAD84;
     --temaClaroCorTexto--: #000000;
+
+    /*cores de fundo*/
+    --azul-claro--: #c0f1ed;
+    --azulMaisClaro--: #b2efe8;
+    --verde--: #2aa972;
+
+    /* formulario */
+    --amarelo--: #fff78a47;
+    --bordaVermelha--: #E5BABA33;
+    --sombraBox--: #000000c7;
+    --laranja--: #ffad846e;
+    --corLetraFormulario--: #000000;
+    --fundoFormulario--: #ffffff33;
+
 }
 
 *{
@@ -14,11 +28,7 @@
     font-family: "Roboto Mono", monospace;
 }
 
-body{
-    /* background-image: url('img/dia.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover; */
-}
+
 .inicio{
     display: flex;
     align-items: center;
