@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --temaClaroCor1--: #FFF78A;
+    --temaClaroCor1transp--: #fff78a9c;
+    --temaClaroCor2--: #FFAD84;
+    --temaClaroCorTexto--: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+body{
+    background-image: url('img/dia.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caixaGeral{
+    margin-top: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.trocadilhoTitulo, .trocadinhoTexto{
+    margin-top: 30px;
+    padding: 10px; 
+    border-radius: 15px; 
+    background: var(--temaClaroCor1transp--);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
