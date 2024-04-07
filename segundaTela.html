@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Dia do Piquinique</title>
 </head>
 <body>
+    <div class="isClaro">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class=" bi bi-toggle-off" viewBox="0 0 16 16">
+            <path d="M11 4a4 4 0 0 1 0 8H8a5 5 0 0 0 2-4 5 5 0 0 0-2-4zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8M0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class=" bi bi-toggle-on" viewBox="0 0 16 16">
+            <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8"/>
+          </svg>
+    </div>
     <div class="caixaGeral">
         <div class="caixatituloedescricao">
             <h2 class="tituloPagina">Faça seu Piquinique</h2>
@@ -14,18 +24,31 @@
         <div class="caixaPessoas">
             <div class="homem">
                 <p>Homem</p>
-                <button>-</button><p>1</p><button>+</button>
+                <button class="menosH">-</button><p class="pHomem">0</p><button class="maisH">+</button>
             </div>
             <div class="mulher">
                 <p>Mulher</p>
-                <button>-</button><p>1</p><button>+</button>
+                 <button class="menosM">-</button><p class="pMulher">0</p><button class="maisM">+</button>
             </div>
             <div class="crianca">
                 <p>Criança</p>
-                <button>-</button><p>1</p><button>+</button>
+                 <button class="menosC">-</button><p class="pCrianca">0</p><button class="maisC">+</button>
             </div>
-            <button class="calcular">Calcular</button>
+            <button class="calcular"><a href="primeiraTela.html">Calcular</a></button>
+
+            <div class="trocadilho">
+                <h3 class="trocadilhoTitulo">Trocadilhos para Piquenique</h3>
+                <p class="trocadinhoTexto">
+                    Por que o refrigerante foi convidado para o piquenique? Porque ele é muito Fanta-stico.
+                </p>
+                <p class="trocadinhoTexto">
+                    "No piquenique, a formiga levou seu violão para tocar 'formicacústico'."
+                </p>
+            </div>
+
+
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
