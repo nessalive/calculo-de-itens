@@ -15,8 +15,8 @@
  background: var(--azul-claro--);
   background: -moz-linear-gradient(180deg,
   var(--azul-claro--) 0%,
-    var(--azulMaisClaro--) 35%,
-     var(--verde--) 100%);
+  var(--azulMaisClaro--) 35%,
+  var(--verde--) 100%);
   background: -webkit-linear-gradient(180deg, 
   var(--azul-claro--) 0%,
   var(--azulMaisClaro--) 35%,
@@ -27,6 +27,7 @@
   var(--verde--) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0f1ed",endColorstr="#2aa972",GradientType=1);
 }
+
 
 .caixaGeral{
  margin-top: 5rem;
