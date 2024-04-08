@@ -31,8 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
      };
 
      localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
+
+     // Redireciona para a próxima página
+     window.location.href = '../segundaTela.html'; 
  });
- window.location.href = '/segundaTela.html';
 });
 
 // Função para validar o formato do e-mail
