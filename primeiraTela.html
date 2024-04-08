@@ -3,18 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/primeiraTela.css">
+    <link rel="stylesheet" href="style.css">
     <title>Dia do Piquinique</title>
 </head>
 <body>
-    <div class="caixaGeral">
-        <div class="caixatituloedescricao">
-            <h2 class="tituloPagina">Piquinique Certo</h2>
-            <h3>Faça seu Piquinique com segurança, não sabe a quantidade de itens levar? Faça o calculo com a gente.</h3>
-            <p>Cadastre-se e faça sua estimativa de itens para ninhuém ficar com fome no seu piquinique</p>
+    <header>
+        <div class="isClaro">
+            <section class="ftco-section">
+                <div class="con">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 text-center">
+                            <div class="w-100 d-flex justify-content-center">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="cbx" style="display:none"/ checked>
+                                <label for="cbx" class="toggle"><span></span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+        <div class="caixaGeral">
+            <div class="caixatituloedescricao">
+                <h2 class="tituloPagina">Piquinique Certo</h2>
+                <h3 class="subtitulo">Faça seu Piquinique com segurança, não sabe a quantidade de itens levar? Faça o calculo com a gente.</h3>
+                <p class="paragrafo">Cadastre-se e faça sua estimativa de itens para ninguem ficar com fome no seu piquinique</p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
         <div class="caixaform">
-            //aqui um form
+            <form action="#" method="post" class="formulario-inicio">
+                <div class="cadastro">
+                    <label for="nome" class="nome"></label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="cadastro">
+                    <label for="email" class="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="cadastro">
+                    <label for="senha" class="senha"></label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite uma senha" required>
+                </div>
+                <div class="cadastro">
+                    <button class="submit" type="submit">Cadastrar</button>
+                </div>
+            </form>
         </div>
-    </div>
+        <div class="pular">
+            <button class="btn-pular"><a href="/segundaTela.html">Pular</a></button>
+        </div>
+    </main>
+    <script src="/assets/js/primeiraTela.js"></script>
 </body>
 </html>
