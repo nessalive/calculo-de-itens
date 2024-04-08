@@ -55,6 +55,125 @@
         border-radius: 2rem;
 }
 
+.fa-circle-plus:before,
+.fa-circle-plus{
+  color: #ffad84;
+}
+
+.caixaPessoas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+.botao{
+    display: flex;
+    padding-top: 15px;
+}
+
+.menosH{
+    height: 30px;
+    width: 30px;
+    background-color: #FFAD84;
+    border: none;
+}
+.maisH{
+    height: 30px;
+    width: 30px;
+    background-color: #FFAD84;
+    border: none;
+}
+
+.menosM{
+    height: 30px;
+    width: 30px;
+    background-color: #FFAD84;
+    border: none;
+}
+.maisM{
+    height: 30px;
+    width: 30px;
+    background-color: #FFAD84;
+    border: none;
+}
+
+.menosC{
+    height: 30px;
+    width: 30px;
+    background-color: #FFAD84;
+    border: none;
+}
+
+.maisC{
+    height: 30px;
+    width: 30px;
+    background-color: #FFAD84;
+    border: none;
+}
+
+.people{
+    margin: 18px;
+}
+
+.homem{
+    padding: 10px;
+    background: var(--temaClaroCor1transp--);
+    padding: 2em;
+    margin: 20px;
+    border-radius: 20px;
+    border-left: 1px solid  var(--bordaVermelha--);
+    border-top: 1px solid var(--bordaVermelha--);
+    /* backdrop-filter: blur(10px); */
+    box-shadow: -3px 3px 20px -7px var(--sombraBox--);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.pHomem{
+    width: 45px;
+}
+
+.mulher{
+    padding: 10px;
+    background: var(--temaClaroCor1transp--);
+    padding: 2em;
+    margin: 20px;
+    border-radius: 20px;
+    border-left: 1px solid  var(--bordaVermelha--);
+    border-top: 1px solid var(--bordaVermelha--);
+    /* backdrop-filter: blur(10px); */
+    box-shadow: -3px 3px 20px -7px var(--sombraBox--);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.pMulher{
+    width: 45px;
+}
+
+.crianca{
+    padding: 10px;
+    background: var(--temaClaroCor1transp--);
+    padding: 2em;
+    margin: 20px;
+    border-radius: 20px;
+    border-left: 1px solid  var(--bordaVermelha--);
+    border-top: 1px solid var(--bordaVermelha--);
+    /* backdrop-filter: blur(10px); */
+    box-shadow: -3px 3px 20px -7px var(--sombraBox--);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.pCrianca{
+    width: 45px;
+}
+
 .trocadilhoTitulo, .trocadinhoTexto{
     margin-top: 30px;
     padding: 10px; 
@@ -64,6 +183,24 @@
     align-items: center; 
     justify-content: center; 
     text-align: center; 
+}
+
+.centraliza-botao{
+    text-align: center
+}
+
+.calcular{
+    background-color: var(--temaClaroCor2--);
+    text-decoration: none;
+    border: none;
+    width: 8em;
+    height: 4em;
+    margin: 4em;
+    border-radius: 2em;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* botão para modo escuro */
