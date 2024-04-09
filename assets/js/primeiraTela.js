@@ -1,44 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
- const form = document.getElementById('cadastroForm');
+const localStorageNome = "dadosPessoas";
+const nome = document.querySelector('.nome');
+const email = document.querySelector('.email');
+const senha = document.querySelector('.senha');
 
- form.addEventListener('submit', function(event) {
-     // Captura os valores dos campos
-     const nome = document.getElementById('nome').value.trim();
-     const email = document.getElementById('email').value.trim();
-     const senha = document.getElementById('senha').value.trim();
+let values = JSON.parse(localStorage.getItem(localStorageNome) || "[ ]");
 
-     // Validação dos campos
-     if (nome === '') {
-         alert('Por favor, insira seu nome.');
-         return;
-     }
+values.push({
+ nome: nome.value,
+ email: email.value,
+ senha: senha.value,
+})
 
-     if (!validarEmail(email)) {
-         alert('Por favor, insira um e-mail válido.');
-         return;
-     }
-
-     if (senha === '') {
-         alert('Por favor, insira sua senha.');
-         return;
-     }
-
-     // Salva os dados no localStorage
-     const dadosUsuario = {
-         nome: nome,
-         email: email,
-         senha: senha
-     };
-
-     localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
-
-     // Redireciona para a próxima página
-     window.location.href = '../segundaTela.html'; 
- });
-});
+ // Armazene os valores no localStorage
+localStorage.setItem('nome', JSON.stringify(values));
+localStorage.setItem('email', JSON.stringify(values));
+localStorage.setItem('senha', JSON.stringify(values));
 
 // Função para validar o formato do e-mail
 function validarEmail(email) {
  const re = /\S+@\S+\.\S+/;
  return re.test(email);
 }
+
