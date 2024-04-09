@@ -29,9 +29,10 @@ let trocacor = () => {
 
     // Verificar se o valor é true ou false antes de aplicar o tema
     if (isClaro) {
+        console.log("entrou no if")
         
     } else {
-        
+        console.log("entrou no else")
     }
 }
 
@@ -99,14 +100,14 @@ menosC.addEventListener('click', () =>{
 
 // Adicionar um evento de clique ao botão de alternância de tema
 isClarobtn.addEventListener("click", () => {
-
+    console.log("apertou o botão")
     // Inverter o valor de isClaro e salvá-lo no localStorage
     const isClaroString = localStorage.getItem('isClaro');
     const isClaro = isClaroString === 'true';
     localStorage.setItem('isClaro', (!isClaro).toString());
 
     trocacor();
-});
+}, false);
 
 // Chamar a função trocacor ao carregar a página para aplicar o tema salvo
 document.addEventListener("DOMContentLoaded", trocacor);
