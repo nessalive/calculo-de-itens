@@ -1,84 +1,78 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const dadosPessoas = JSON.parse(localStorage.getItem('calculoItens'));
+// Recuperando os valores numéricos do LocalStorage
+const qntHomem = parseInt(localStorage.getItem("qntHomem")) || 0;
+const qntMulher = parseInt(localStorage.getItem("qntMulher")) || 0;
+const qntCrianca = parseInt(localStorage.getItem("qntCrianca")) || 0;
 
-    // Verifica se há dados salvos no localStorage
-    if (dadosPessoas) {
-        calcularEExibirResultado(dadosPessoas);
-    } else {
-        // Redireciona para a primeira tela se não houver dados
-        window.location.href = 'segundaTela.html';
-    }
-});
+// Recuperar valores do localStorage
+const nome = JSON.parse(localStorage.getItem('nome'));
+const email = JSON.parse(localStorage.getItem('email'));
+const senha = JSON.parse(localStorage.getItem('senha'));
 
-function exibirResultado(dadosPessoas) {
-    // Atualiza os elementos HTML com os resultados salvos no localStorage
-    document.querySelector('.qntHomem').textContent = dadosPessoas.qntHomem;
-    document.querySelector('.qntMulher').textContent = dadosPessoas.qntMulher;
-    document.querySelector('.qntCrianca').textContent = dadosPessoas.qntCrianca;
-}
+// Selecionar elementos HTML onde você deseja exibir os valores
+const nomeElement = document.querySelector('.nome-form');
+const emailElement = document.querySelector('.email-form');
 
-function calcularEExibirResultado(dadosPessoas) {
-    // Chama as funções de cálculo e armazena os resultados em variáveis
-    const quantidadeSanduiches = calcularQuantidadeSanduiches(dadosPessoas);
-    const quantidadePipoca = calcularQuantidadePipoca(dadosPessoas);
-    const quantidadeTorradas = calcularQuantidadeTorradas(dadosPessoas);
-    const quantidadeSalgados = calcularQuantidadeSalgados(dadosPessoas);
-    const quantidadeGelo = calcularQuantidadeGelo(dadosPessoas);
-    const quantidadeRefrigerante = calcularQuantidadeRefrigerante(dadosPessoas);
-    const quantidadeAgua = calcularQuantidadeAgua(dadosPessoas);
-    const quantidadeFrutas = calcularQuantidadeFrutas(dadosPessoas);
+// Exibir valores na tela
+nomeElement.textContent = nome;
+emailElement.textContent = email;
 
-    // Atualiza os elementos HTML com os resultados calculados
-    document.querySelector('.sanduiches-quantidade').textContent = quantidadeSanduiches;
-    document.querySelector('.pipoca-quantidade').textContent = quantidadePipoca;
-    document.querySelector('.torradas-quantidade').textContent = quantidadeTorradas;
-    document.querySelector('.salgados-quantidade').textContent = quantidadeSalgados;
-    document.querySelector('.gelo-quantidade').textContent = quantidadeGelo;
-    document.querySelector('.refrigerante-quantidade').textContent = quantidadeRefrigerante;
-    document.querySelector('.agua-quantidade').textContent = quantidadeAgua;
-    document.querySelector('.frutas-quantidade').textContent = quantidadeFrutas;
-}
+// aqui vai as funções de exibir os resultados na tela
+// somando a quantidade de pessoas e o quanto cada uma precisa levar para o piquenique 
+// Uso das funções com os valores recuperados do LocalStorage
+const quantidadeSanduiches = calcularQuantidadeSanduiches(qntHomem, qntMulher, qntCrianca);
+const quantidadePipoca = calcularQuantidadePipoca(qntHomem, qntMulher, qntCrianca);
+const quantidadeTorradas = calcularQuantidadeTorradas(qntHomem, qntMulher, qntCrianca);
+const quantidadeSalgados = calcularQuantidadeSalgados(qntHomem, qntMulher, qntCrianca);
+const quantidadeGelo = calcularQuantidadeGelo(qntHomem, qntMulher, qntCrianca);
+const quantidadeRefrigerante = calcularQuantidadeRefrigerante(qntHomem, qntMulher, qntCrianca);
+const quantidadeAgua = calcularQuantidadeAgua(qntHomem, qntMulher, qntCrianca);
+const quantidadeFrutas = calcularQuantidadeFrutas(qntHomem, qntMulher, qntCrianca);
 
-// Funções de cálculo da quantidade de itens do piquenique
-function calcularQuantidadeSanduiches(dadosPessoas) {
-    const homens = dadosPessoas.homens || 0;
-    const mulheres = dadosPessoas.mulheres || 0;
-    const criancas = dadosPessoas.criancas || 0;
+ // Funções de cálculo da quantidade de itens do piquenique
+ function calcularQuantidadeSanduiches(homens, mulheres, criancas) {
     return ((0.4 * homens) + (0.32 * mulheres) + (0.20 * criancas)).toFixed(2) + " KG";
 }
 
-function calcularQuantidadePipoca(dadosPessoas) {
-    const adultos = dadosPessoas.adultos || 0;
-    const criancas = dadosPessoas.criancas || 0;
+function calcularQuantidadePipoca(adultos, criancas) {
     return (2 * adultos + 1 * criancas) + " pacotes";
 }
 
-function calcularQuantidadeTorradas(dadosPessoas) {
-    const totalPessoas = (dadosPessoas.homens || 0) + (dadosPessoas.mulheres || 0) + (dadosPessoas.criancas || 0);
+function calcularQuantidadeTorradas(homens, mulheres, criancas) {
+    const totalPessoas = homens + mulheres + criancas;
     return (1 * totalPessoas) + " KG";
 }
 
-function calcularQuantidadeSalgados(dadosPessoas) {
-    const totalPessoas = (dadosPessoas.homens || 0) + (dadosPessoas.mulheres || 0) + (dadosPessoas.criancas || 0);
+function calcularQuantidadeSalgados(homens, mulheres, criancas) {
+    const totalPessoas = homens + mulheres + criancas;
     return (0.04 * totalPessoas) + " KG";
 }
 
-function calcularQuantidadeGelo(dadosPessoas) {
-    const totalPessoas = (dadosPessoas.homens || 0) + (dadosPessoas.mulheres || 0) + (dadosPessoas.criancas || 0);
+function calcularQuantidadeGelo(homens, mulheres, criancas) {
+    const totalPessoas = homens + mulheres + criancas;
     return (5 * Math.ceil(totalPessoas / 10)) + " KG";
 }
 
-function calcularQuantidadeRefrigerante(dadosPessoas) {
-    const totalPessoas = (dadosPessoas.homens || 0) + (dadosPessoas.mulheres || 0) + (dadosPessoas.criancas || 0);
+function calcularQuantidadeRefrigerante(homens, mulheres, criancas) {
+    const totalPessoas = homens + mulheres + criancas;
     return Math.ceil(totalPessoas / 5) + " garrafas de 2L";
 }
 
-function calcularQuantidadeAgua(dadosPessoas) {
-    const totalPessoas = (dadosPessoas.homens || 0) + (dadosPessoas.mulheres || 0) + (dadosPessoas.criancas || 0);
+function calcularQuantidadeAgua(homens, mulheres, criancas) {
+    const totalPessoas = homens + mulheres + criancas;
     return Math.ceil(totalPessoas / 5) + " garrafas de 1L";
 }
 
-function calcularQuantidadeFrutas(dadosPessoas) {
-    const totalPessoas = (dadosPessoas.homens || 0) + (dadosPessoas.mulheres || 0) + (dadosPessoas.criancas || 0);
+function calcularQuantidadeFrutas(homens, mulheres, criancas) {
+    const totalPessoas = homens + mulheres + criancas;
     return (3 * totalPessoas) + " pacotes de 600ml";
 }
+
+// Exibir os resultados nas classes das células da tabela
+document.querySelector('.sanduiches-quantidade').textContent = quantidadeSanduiches;
+document.querySelector('.pipoca-quantidade').textContent = quantidadePipoca;
+document.querySelector('.torradas-quantidade').textContent = quantidadeTorradas;
+document.querySelector('.salgados-quantidade').textContent = quantidadeSalgados;
+document.querySelector('.gelo-quantidade').textContent = quantidadeGelo;
+document.querySelector('.refrigerante-quantidade').textContent = quantidadeRefrigerante;
+document.querySelector('.agua-quantidade').textContent = quantidadeAgua;
+document.querySelector('.frutas-quantidade').textContent = quantidadeFrutas;
