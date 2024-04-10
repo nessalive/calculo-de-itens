@@ -6,13 +6,13 @@ const qntCrianca = parseInt(localStorage.getItem("qntCrianca")) || 0;
 // Recuperar valores do localStorage
 const nome = JSON.parse(localStorage.getItem('nome'));
 const email = JSON.parse(localStorage.getItem('email'));
-const senha = JSON.parse(localStorage.getItem('senha'));
 
 // Selecionar elementos HTML onde você deseja exibir os valores
 const nomeElement = document.querySelector('.nome-form');
 const emailElement = document.querySelector('.email-form');
 
-// Exibir valores na tela
+// Exibir valores do nome e email na tela
+// foi melhor não colocar a senha e mantela salva só no LocalStorage
 nomeElement.textContent = nome;
 emailElement.textContent = email;
 
@@ -28,7 +28,7 @@ const quantidadeRefrigerante = calcularQuantidadeRefrigerante(qntHomem, qntMulhe
 const quantidadeAgua = calcularQuantidadeAgua(qntHomem, qntMulher, qntCrianca);
 const quantidadeFrutas = calcularQuantidadeFrutas(qntHomem, qntMulher, qntCrianca);
 
- // Funções de cálculo da quantidade de itens do piquenique
+ // Funções de cálculo de itens do piquenique
  function calcularQuantidadeSanduiches(homens, mulheres, criancas) {
     return ((0.4 * homens) + (0.32 * mulheres) + (0.20 * criancas)).toFixed(2) + " KG";
 }
