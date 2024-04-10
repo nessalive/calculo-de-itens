@@ -1,5 +1,9 @@
 # Calculo-de-itens
  Projeto final do modulo Front End Dinâmico (JS DOM) do Santander-Coders
+ 
+ - link do Layout do [Figma](https://www.figma.com/file/K4ZqcXsCG68gLbly4AxxNO/Projeto-JS?type=design&node-id=0-1&mode=design&t=T8CN7cE1uCTBA6EM-0)
+
+- link do [projeto](https://main--anacasmachado.netlify.app/) 
 
 ---
 
