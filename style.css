@@ -19,6 +19,8 @@
     --corLetraFormulario--: #000000;
     --fundoFormulario--: #ffffff33;
 
+    --fundoImagem: url(/img/dia.jpeg);
+
 }
 
 *{
@@ -26,6 +28,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Mono", monospace;
+    color: var(--temaClaroCorTexto--);
 }
 
 
@@ -33,12 +36,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(192,241,237);
-   background: -moz-linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
-   background: -webkit-linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
-   background: linear-gradient(180deg, rgba(192,241,237,1) 0%, rgba(178,239,232,1) 35%, rgba(42,169,114,1) 100%);
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0f1ed",endColorstr="#2aa972",GradientType=1);
+    background: var(--azul-claro--);
+     background: -moz-linear-gradient(180deg,
+     var(--azul-claro--) 0%,
+     var(--azulMaisClaro--) 35%,
+     var(--verde--) 100%);
+     background: -webkit-linear-gradient(180deg, 
+     var(--azul-claro--) 0%,
+     var(--azulMaisClaro--) 35%,
+     var(--verde--) 100%);
+     background: linear-gradient(180deg,
+     var(--azul-claro--) 0%,
+     var(--azulMaisClaro--) 35%,
+     var(--verde--) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0f1ed",endColorstr="#2aa972",GradientType=1);
    }
+
 
 .caixaGeral{
         margin-top: 5rem;
@@ -49,7 +62,7 @@
         align-items: center;
         width: 80rem;
         height: 55rem;
-        background-image: url(/img/dia.jpeg);
+        background-image: var(--fundoImagem);
         background-size: cover; 
         background-repeat: no-repeat;
         border-radius: 2rem;
@@ -284,14 +297,14 @@ a{
         transform: scale(1);
         opacity: 1;
         pointer-events: none;
-        color: #fff; }
+        color: var(--temaClaroCorTexto--); }
   
   #cbx:checked + .toggle:before,
   #cbx2:checked + .toggle:before {
     background: #f6d379;
     content: '';
     text-align: left;
-    color: #fff; }
+    color:  var(--temaClaroCorTexto--); }
   
   #cbx:checked + .toggle span,
   #cbx2:checked + .toggle span {
@@ -316,4 +329,30 @@ a{
       font-family: 'Fontawesome';
       content: '\f185';
       background: #f1bc31;
-      color: #000; }
+      color: var(--temaClaroCorTexto--); }
+
+
+      .temaEscuro {
+        --temaClaroCor1--: #F2613F;
+        --temaClaroCor1transp--: #f2603f81;
+        --temaClaroCor2--: #FFAD84;
+        --temaClaroCorTexto--: #ffffff;
+    
+        /*cores de fundo*/
+        --azul-claro--: #02074e;
+        --azulMaisClaro--: #040130;
+        --verde--: #073d02;
+    
+        /* formulario */
+        --amarelo--: #f2603f8c;
+        --bordaVermelha--: #46000033;
+        --sombraBox--: #d4d3d3c7;
+        --laranja--: #9b382271;
+        --corLetraFormulario--: #ffffff;
+        --fundoFormulario--: #0000001c;
+        --fundoImagem--: url(/img/noite.jpeg)
+    }
+    
+    .temaEscuro .caixaGeral {
+        background-image: var(--fundoImagem--);
+    }

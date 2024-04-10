@@ -38,7 +38,7 @@
  align-items: center;
  width: 80rem;
  height: 55rem;
- background-image: url(/img/dia.jpeg);
+ background-image: url(--fundoImagem);
  background-size: cover; 
  background-repeat: no-repeat;
  border-radius: 2rem;
